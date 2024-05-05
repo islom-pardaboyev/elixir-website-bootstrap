@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* variables */
+:root {
+    --c-dark: #212529;
+    --c-brand: #4e57d4;
+    --c-brand-light: #6970dd;
+    --c-brand-rgb: rgb(78, 87, 212);
+    --c-body: #727272;
+    --font-base: 'Montserrat', sans-serif;
+    --box-shadow: 0px 15px 25px rgba(0, 0, 0, .08);
+    --transition: all .5s ease;
+}
+
+* {
+    font-family: var(--font-base);
+}
+
+body {
+    line-height: 1.7;
+    color: var(--c-body) !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    font-weight: 600 !important;
+    color: var(--c-dark) !important;
+}
+
+a {
+    text-decoration: none;
+    color: var(--c-brand);
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--c-brand-light);
+}
+
+img {
+    max-width: 100%;
+    height: 100%;
+}
+
+.section-padding {
+    padding: 140px 0;
+}
+
+.theme-shadow {
+    box-shadow: var(--box-shadow);
+}
+
+
+/* navbar */
+.navbar {
+    box-shadow: var(--box-shadow);
+}
+
+.navbar-nav,
+.nav-link {
+    font-weight: 500;
+    color: var(--c-dark);
+}
+
+.navbar-nav .nav-link.active {
+    color: var(--c-brand);
+}
+
+.btn {
+    font-weight: 600 !important;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 10px 24px !important;
+}
+
+.btn-brand {
+    background-color: var(--c-brand) !important;
+    color: #fff !important;
+}
+
+.btn-brand:hover {
+    background-color: transparent !important;
+    border: 2px solid var(--c-brand-light) !important;
+    color: var(--c-brand-light) !important;
+    transition: var(--transition);
+}
+
+#hero {
+    background: linear-gradient(rgba(78, 87, 212, 0.507), rgba(78, 87, 212, 0.438)),
+        url('../img/hero-1.png') center/cover no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.section-title {
+    margin-bottom: 60px !important;
+}
+
+.section-title .line {
+    width: 60px;
+    height: 4px;
+    background-color: var(--c-brand);
+    margin: 16px auto 24px;
+}
+
+.section-title p {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.iconbox {
+    width: 70px;
+    height: 70px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(78, 87, 212, .1);
+    color: var(--c-brand);
+    font-size: 34px;
+    flex: none;
+}
+
+.service {
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.service::after {
+    content: "";
+    width: 40px;
+    height: 40px;
+    background: rgba(78, 87, 212, .2);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transition: var(--transition);
+}
+
+.service:hover::after {
+    width: 100%;
+    height: 100%;
+    background: var(--c-brand);
+    z-index: -1;
+}
+
+.service:hover h5,
+.service:hover p {
+    color: white !important;
+}
+
+.service:hover .iconbox {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+#counter {
+    background: linear-gradient(rgba(78, 87, 212, 0.8), rgba(78, 87, 212, 0.8)),
+        url('../img/counter.png') center/cover no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.review-head {
+    position: relative;
+}
+
+.review small {
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--c-brand);
+}
+
+.review-head::after {
+    content: '';
+    width: 28px;
+    height: 28px;
+    position: absolute;
+    bottom: 0;
+    background-color: white;
+    transform: rotate(45deg);
+}
+
+#contact {
+    position: relative;
+    z-index: 2;
+}
+
+#contact::after {
+    content: '';
+    width: 100%;
+    height: 70%;
+    background: linear-gradient(rgba(78, 87, 212, 0.507), rgba(78, 87, 212, 0.438)),
+        url('../img/counter.png') center/cover no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+#contact .form-control{
+    border-radius: 0;
+}
+
+#contact .form-control:focus{
+    box-shadow: none;
+    border-color: var(--c-brand);
+}
